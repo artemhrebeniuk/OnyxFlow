@@ -1,0 +1,149 @@
+/* Сброс базовых стилей браузера */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0f0f13; 
+    background-image: radial-gradient(circle at 50% 40%, #2e1a47 0%, #0f0f13 65%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    overflow: hidden; 
+    position: relative;
+}
+
+/* Контейнер для центрирования контента */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    z-index: 10;
+    opacity: 0; 
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.main-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Логотип */
+.logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Название канала */
+.channel-name {
+    font-size: 38px;
+    font-weight: 800; 
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Описание */
+.channel-desc {
+    font-size: 22px;
+    font-weight: 400; 
+    color: #dadada;
+    margin-bottom: 50px;
+    line-height: 1.3;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+}
+
+/* Кнопка */
+.telegram-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    
+    background: linear-gradient(90deg, #9D4edd 0%, #7b2cbf 100%);
+    color: white;
+    text-decoration: none;
+    
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    padding: 18px 30px; 
+    width: auto; 
+    min-width: 280px; 
+    max-width: 100%; 
+    white-space: nowrap; 
+    
+    border-radius: 16px; 
+    
+    box-shadow: 0 0 35px rgba(157, 78, 221, 0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.telegram-btn:hover {
+    box-shadow: 0 0 50px rgba(157, 78, 221, 0.8);
+    transform: translateY(-2px);
+}
+
+.telegram-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 20px rgba(157, 78, 221, 0.4);
+}
+
+/* Футер */
+.footer {
+    position: absolute;
+    bottom: 30px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.3); /* Тот самый полупрозрачный цвет */
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    /* Чтобы ссылка наследовала стили отсюда */
+    display: flex; 
+    gap: 4px;
+}
+
+/* Ссылка внутри футера */
+.author-link {
+    /* === ГЛАВНОЕ: Убираем вид ссылки === */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Цвет берется у родителя (.footer) -> серый */
+    font-weight: inherit; /* Жирность как у родителя */
+    
+    cursor: pointer; /* Курсор-рука, чтобы было понятно, что можно нажать */
+    transition: color 0.3s ease;
+}
+
+/* При наведении делаем текст совсем чуть-чуть светлее, 
+   чтобы пользователь понял, что это кнопка, но дизайн не ломался */
+.author-link:hover {
+    color: rgba(255, 255, 255, 0.6); 
+}
+
+/* Адаптивность */
+@media (max-width: 380px) {
+    .channel-name { font-size: 32px; }
+    .channel-desc { font-size: 18px; margin-bottom: 40px; }
+    .telegram-btn { 
+        width: 100%; 
+        min-width: auto;
+        font-size: 14px; 
+        padding: 16px 20px; 
+    }
+}
