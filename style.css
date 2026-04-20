@@ -47,6 +47,12 @@ body {
     margin-bottom: 25px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
 /* Название канала */
@@ -68,6 +74,15 @@ body {
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
 }
 
+/* Контейнер кнопок */
+.action-area {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 100%;
+    align-items: center;
+}
+
 /* Кнопка */
 .telegram-btn {
     display: flex;
@@ -75,7 +90,7 @@ body {
     align-items: center;
     gap: 12px;
     
-    background: linear-gradient(90deg, #9D4edd 0%, #7b2cbf 100%);
+    background: linear-gradient(90deg, #2AABEE 0%, #229ED9 100%);
     color: white;
     text-decoration: none;
     
@@ -91,19 +106,95 @@ body {
     
     border-radius: 16px; 
     
-    box-shadow: 0 0 35px rgba(157, 78, 221, 0.6);
+    box-shadow: 0 0 35px rgba(42, 171, 238, 0.6);
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .telegram-btn:hover {
-    box-shadow: 0 0 50px rgba(157, 78, 221, 0.8);
+    box-shadow: 0 0 50px rgba(42, 171, 238, 0.8);
     transform: translateY(-2px);
 }
 
 .telegram-btn:active {
     transform: scale(0.98);
-    box-shadow: 0 0 20px rgba(157, 78, 221, 0.4);
+    box-shadow: 0 0 20px rgba(42, 171, 238, 0.4);
+}
+
+/* Кнопка Twitch */
+.twitch-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    
+    background: linear-gradient(90deg, #9146FF 0%, #6441A5 100%);
+    color: white;
+    text-decoration: none;
+    
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    padding: 18px 30px; 
+    width: auto; 
+    min-width: 280px; 
+    max-width: 100%; 
+    white-space: nowrap; 
+    
+    border-radius: 16px; 
+    
+    box-shadow: 0 0 35px rgba(145, 70, 255, 0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.twitch-btn:hover {
+    box-shadow: 0 0 50px rgba(145, 70, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+.twitch-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 20px rgba(145, 70, 255, 0.4);
+}
+
+/* Кнопка YouTube */
+.youtube-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    
+    background: linear-gradient(90deg, #ff0000 0%, #cc0000 100%);
+    color: white;
+    text-decoration: none;
+    
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+    padding: 18px 30px; 
+    width: auto; 
+    min-width: 280px; 
+    max-width: 100%; 
+    white-space: nowrap; 
+    
+    border-radius: 16px; 
+    
+    box-shadow: 0 0 35px rgba(255, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.youtube-btn:hover {
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.8);
+    transform: translateY(-2px);
+}
+
+.youtube-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
 
 /* Футер */
@@ -140,7 +231,7 @@ body {
 @media (max-width: 380px) {
     .channel-name { font-size: 32px; }
     .channel-desc { font-size: 18px; margin-bottom: 40px; }
-    .telegram-btn { 
+    .telegram-btn, .twitch-btn, .youtube-btn { 
         width: 100%; 
         min-width: auto;
         font-size: 14px; 
