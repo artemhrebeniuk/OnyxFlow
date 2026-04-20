@@ -1,4 +1,3 @@
-/* Сброс базовых стилей браузера */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +19,6 @@ body {
     position: relative;
 }
 
-/* Контейнер для центрирования контента */
 .main-container {
     display: flex;
     flex-direction: column;
@@ -40,7 +38,6 @@ body {
     transform: translateY(0);
 }
 
-/* Логотип */
 .logo {
     width: 80px;
     height: auto;
@@ -55,7 +52,6 @@ body {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
-/* Название канала */
 .channel-name {
     font-size: 38px;
     font-weight: 800; 
@@ -64,7 +60,6 @@ body {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
-/* Описание */
 .channel-desc {
     font-size: 22px;
     font-weight: 400; 
@@ -74,7 +69,6 @@ body {
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
 }
 
-/* Контейнер кнопок */
 .action-area {
     display: flex;
     flex-direction: column;
@@ -83,29 +77,28 @@ body {
     align-items: center;
 }
 
-/* Кнопка */
 .telegram-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
-    
+
     background: linear-gradient(90deg, #2AABEE 0%, #229ED9 100%);
     color: white;
     text-decoration: none;
-    
+
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
-    
+
     padding: 18px 30px; 
     width: auto; 
     min-width: 280px; 
     max-width: 100%; 
     white-space: nowrap; 
-    
+
     border-radius: 16px; 
-    
+
     box-shadow: 0 0 35px rgba(42, 171, 238, 0.6);
     transition: all 0.3s ease;
     cursor: pointer;
@@ -121,29 +114,28 @@ body {
     box-shadow: 0 0 20px rgba(42, 171, 238, 0.4);
 }
 
-/* Кнопка Twitch */
 .twitch-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
-    
+
     background: linear-gradient(90deg, #9146FF 0%, #6441A5 100%);
     color: white;
     text-decoration: none;
-    
+
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
-    
+
     padding: 18px 30px; 
     width: auto; 
     min-width: 280px; 
     max-width: 100%; 
     white-space: nowrap; 
-    
+
     border-radius: 16px; 
-    
+
     box-shadow: 0 0 35px rgba(145, 70, 255, 0.6);
     transition: all 0.3s ease;
     cursor: pointer;
@@ -159,29 +151,28 @@ body {
     box-shadow: 0 0 20px rgba(145, 70, 255, 0.4);
 }
 
-/* Кнопка YouTube */
 .youtube-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
-    
+
     background: linear-gradient(90deg, #ff0000 0%, #cc0000 100%);
     color: white;
     text-decoration: none;
-    
+
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
-    
+
     padding: 18px 30px; 
     width: auto; 
     min-width: 280px; 
     max-width: 100%; 
     white-space: nowrap; 
-    
+
     border-radius: 16px; 
-    
+
     box-shadow: 0 0 35px rgba(255, 0, 0, 0.6);
     transition: all 0.3s ease;
     cursor: pointer;
@@ -197,37 +188,32 @@ body {
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
 
-/* Футер */
 .footer {
     position: absolute;
     bottom: 30px;
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.3); /* Тот самый полупрозрачный цвет */
+    color: rgba(255, 255, 255, 0.3); 
     font-weight: 400;
     letter-spacing: 0.5px;
-    /* Чтобы ссылка наследовала стили отсюда */
+
     display: flex; 
     gap: 4px;
 }
 
-/* Ссылка внутри футера */
 .author-link {
-    /* === ГЛАВНОЕ: Убираем вид ссылки === */
-    text-decoration: none; /* Убираем подчеркивание */
-    color: inherit; /* Цвет берется у родителя (.footer) -> серый */
-    font-weight: inherit; /* Жирность как у родителя */
-    
-    cursor: pointer; /* Курсор-рука, чтобы было понятно, что можно нажать */
+
+    text-decoration: none; 
+    color: inherit; 
+    font-weight: inherit; 
+
+    cursor: pointer; 
     transition: color 0.3s ease;
 }
 
-/* При наведении делаем текст совсем чуть-чуть светлее, 
-   чтобы пользователь понял, что это кнопка, но дизайн не ломался */
 .author-link:hover {
     color: rgba(255, 255, 255, 0.6); 
 }
 
-/* Адаптивность */
 @media (max-width: 380px) {
     .channel-name { font-size: 32px; }
     .channel-desc { font-size: 18px; margin-bottom: 40px; }
